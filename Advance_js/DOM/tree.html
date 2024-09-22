@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tree</title>
+</head>
+<body style="background-color: gray; color: white;">
+
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div)
+    div.className ="main"
+    div.id = Math.random()*10
+    div.setAttribute("title","generate title")
+    div.style.backgroundColor = "red"
+    div.style.padding = "12px"
+    //div.innerText = "hello"
+    const addText = document.createTextNode("hello")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+
+</script>
+</html>

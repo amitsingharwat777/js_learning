@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_mal.</title>
+</head>
+
+<body style="background-color: rgb(49, 49, 49); color: white;">
+
+    <ul class="lan">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //adding
+    //trick 1
+    function addlang(langName) {
+        const li = document.createElement('li');
+
+        li.innerHTML = langName; // Fixed template literal to use variable directly
+        document.querySelector('.lan').appendChild(li);
+    }
+    addlang("python")
+    addlang("typescript")
+    addlang("c++")
+
+    //trick 2
+    function aol(langName){
+       const li = document.createElement('li')
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.lan').appendChild(li)
+    }
+    aol("java")
+    //Edit
+    //trick
+    const sl = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "mojo"
+    sl.replaceWith(newli)
+
+    //trick 2
+    const fl = document.querySelector("li:first-child")
+    fl.outerHTML = "<li>Typescript</li>"
+    //remove
+    const ll = document.querySelector("li:last-child")
+    ll.remove()
+
+</script>
+
+</html>
